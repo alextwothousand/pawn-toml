@@ -5,10 +5,6 @@
 #ifndef PAWN_TOML_PAWN_NATIVES_H
 #define PAWN_TOML_PAWN_NATIVES_H
 
-#ifndef __cplusplus
-#define nullptr NULL
-#endif
-
 #define PAWN_NATIVE_DECL(export, func) \
 	{ export, n_##func }
 

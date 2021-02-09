@@ -19,7 +19,7 @@ PAWN_EXPORT bool PLUGIN_CALL Load(void** ppData)
 
 const AMX_NATIVE_INFO native_list[] = {
 	PAWN_NATIVE_DECL("Toml_Parse", TomlParse),
-	{ nullptr, nullptr }
+	{ NULL, NULL }
 };
 
 PAWN_EXPORT int PLUGIN_CALL AmxLoad(AMX* amx)

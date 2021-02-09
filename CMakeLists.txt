@@ -64,10 +64,11 @@ elseif(USING_UNIX)
 endif()
 
 add_library(pawn_toml SHARED
-		${SAMP_SDK_DIR}/amxplugin.cpp ${SAMP_SDK_DIR}/amx/getch.c ${TOML_LIB_DIR}/toml.c
+		${SAMP_SDK_DIR}/amxplugin.cpp ${SAMP_SDK_DIR}/amx/getch.h ${TOML_LIB_DIR}/toml.c
 		source/plugin.def source/main.c source/main.h source/common.h source/natives.c source/natives.h source/pawn-natives.h)
 
 target_include_directories(pawn_toml PUBLIC ${SAMP_SDK_DIR})
+target_include_directories(pawn_toml PUBLIC ${SAMP_SDK_DIR}/amx)
 target_include_directories(pawn_toml PUBLIC ${TOML_LIB_DIR})
 
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
